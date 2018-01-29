@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  name = 'img/aboutme.png';
+
+  pageName: string;
+
+  nameGetter(data: string){
+    this.pageName = data;
+    
+  }
 }

@@ -1,0 +1,8 @@
+<div class="col-xs-12">
+  <ul class="navList">
+    <li *ngFor = "let pic of header_images; let i of index">
+      <img id="pic" class="img-fluid img-style" src="{{pic.src}}" alt="{{pic.name}}" (click)="clickedPage(pic.name)">
+      <p>{{pic.name}}</p>
+    </li>
+  </ul>
+</div>
