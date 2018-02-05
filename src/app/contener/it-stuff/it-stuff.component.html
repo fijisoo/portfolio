@@ -1,0 +1,27 @@
+<div class="row">
+  <label for="tagNameInput">Wpisz tag:</label>
+  <input #hashName id="tagNameInput" [(ngModel)]="currentTagName">
+</div>
+{{hashName.value}}
+<!--&lt;!&ndash;<p ></p>&ndash;&gt;-->
+
+<div class="row">
+
+  <div class="col-md-7">
+    <div *ngFor="let question of questionsData; let i = index" >
+      <div *ngFor="let tag of question.tag">
+        <app-single-question *ngIf="tag === currentTagName"
+                             [singleQuestion]="question"
+                             [counter]="i"
+        ></app-single-question>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <app-show-tags (clickedTag)="onClickedTag($event)"></app-show-tags>
+  </div>
+
+
+</div>
+

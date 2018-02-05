@@ -1,0 +1,10 @@
+<div class="label-info" [ngClass]="{'noAnswer': !singleQuestion.answer}">
+  <label>{{counter}}<a (click)="toggle = !toggle">
+    {{singleQuestion.question}}
+  </a></label>
+
+</div>
+
+<div *ngIf="toggle">
+      answer : {{singleQuestion.answer}}
+</div>

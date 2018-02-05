@@ -1,0 +1,7 @@
+<div class="col-md-12">
+  <button *ngFor="let tag of tagsMapFinal"
+  class="btn-primary"
+  (click)="showQuestions(tag.name)">
+    {{tag.counter + 1}} | {{tag.name}}
+  </button>
+</div>

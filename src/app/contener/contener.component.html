@@ -1,0 +1,14 @@
+<hr/>
+<div id="app-contener">
+  <div id="container-test" [ngSwitch]="getPageName">
+    <app-about-me *ngSwitchCase="'aboutMe'"></app-about-me>
+    <app-extras *ngSwitchCase="'extras'"></app-extras>
+    <app-fav-songs *ngSwitchCase="'favSongs'"></app-fav-songs>
+    <app-it-stuff *ngSwitchCase="'itStuff'"></app-it-stuff>
+    <app-js-tutu *ngSwitchCase="'jsTutu'"></app-js-tutu>
+    <app-my-music *ngSwitchCase="'myMusic'"></app-my-music>
+    <app-question-mark *ngSwitchCase="'questionMark'"></app-question-mark>
+    <app-what-i-love *ngSwitchCase="'whatILove'"></app-what-i-love>
+  </div>
+
+</div>
